@@ -11,6 +11,7 @@ title('MCD method')
 dev.off()
 
 # The MLE
+mu = c(0,0)
 mu[1] <- mean(group1[,1])
 mu[2] <- mean(group1[,2])
 Sigma <- cov(group1)
