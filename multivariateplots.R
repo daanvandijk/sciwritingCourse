@@ -45,8 +45,8 @@ for (outliers in c(0,0.2,0.4)) {
   robust1 <- covMcd(group)
   robust2 <- covMcd(group, alpha=0.75)
   
-  lines <- append(lines, sprintf("%d & MCD (0.75) & %.2e & %.2e & - \\\\", outliers * 100, norm(robust2$center - mu1), norm(robust2$cov - Sigma1)))
-  lines <- append(lines, sprintf("%d & MCD (0.5) & %.2e & %.2e & - \\\\", outliers * 100, norm(robust1$center - mu1), norm(robust1$cov - Sigma1)))
+  lines <- append(lines, sprintf("%d & MCD (0.75) & %.2e & %.2e & %.2e \\\\", outliers * 100, norm(robust2$center - mu1), norm(robust2$cov - Sigma1), robust2$crit))
+  lines <- append(lines, sprintf("%d & MCD (0.5) & %.2e & %.2e & %.2e \\\\", outliers * 100, norm(robust1$center - mu1), norm(robust1$cov - Sigma1), robust1$crit))
 }
 lines <- append(lines, c(
   "\\end{tabular}", 
