@@ -19,6 +19,7 @@ experiment <- function(mu1, Sigma1, mu2, Sigma2, name, caption) {
   handle <- file(sprintf("%s.tex", name))
   lines <- c("\\begin{table}[h]",
              "\\centering",
+             "\\footnotesize",
              "\\begin{tabular}{l|l|l|l|l}",
              "\\% Outliers & Method & $|\\hat{\\mu} - \\mu|$ & $|\\hat{\\Sigma} - \\Sigma|$ & $\\log(\\text{Det.})$ \\\\ \\hline")
   for (outliers in c(0,0.2,0.4)) {
