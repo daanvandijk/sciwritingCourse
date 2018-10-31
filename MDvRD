@@ -17,7 +17,7 @@ sqrt(D2)
 
 MD <- cbind(c(1:15), sqrt(D2))
 plot(MD, xlab='Observation', ylab='MD', col=colors)
-text(MD[11:15,], labels=c(11,12,13,14,15), pos = 4)
+text(MD[11:15,], labels=c(11,12,13,14,15), pos = 2)
 abline(h=sqrt(5.991), col='blue')
 title('Classical estimators')
 
@@ -30,6 +30,6 @@ sqrt(D2MCD)
 
 RD <- cbind(c(1:15), sqrt(D2MCD))
 plot(RD, xlab='Observation', ylab='MD', col=colors)
-text(RD[11:15,], labels=c(11,12,13,14,15), pos = 4)
+text(RD[11:15,], labels=c(11,12,13,14,15), pos = 2)
 abline(h=sqrt(5.991), col='blue')
 title('MCD estimators')
